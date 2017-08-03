@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tower climb", "tower climb.csproj", "{BFE28B36-2EB1-B388-4A9D-60BC79D641E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tower climb.Editor", "tower climb.Editor.csproj", "{B899A673-5C13-D1C2-0329-DB98F0D4E23A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFE28B36-2EB1-B388-4A9D-60BC79D641E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE28B36-2EB1-B388-4A9D-60BC79D641E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE28B36-2EB1-B388-4A9D-60BC79D641E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE28B36-2EB1-B388-4A9D-60BC79D641E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B899A673-5C13-D1C2-0329-DB98F0D4E23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B899A673-5C13-D1C2-0329-DB98F0D4E23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B899A673-5C13-D1C2-0329-DB98F0D4E23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B899A673-5C13-D1C2-0329-DB98F0D4E23A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
