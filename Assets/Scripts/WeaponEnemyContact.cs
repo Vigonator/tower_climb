@@ -15,5 +15,13 @@ public class WeaponEnemyContact : Weapon {
 		
 	}
 
+    private void OnTriggerEnter(Collider other)
+    {
+        onHit(other);
+    }
 
+    private void OnTriggerStay(Collider other)
+    {
+        onHit(other);
+    }
 }

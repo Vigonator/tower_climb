@@ -38,7 +38,7 @@ public class PlayerMovement : EntityMovement
 
     protected override void gravityAndLadder()
     {
-        if (status.grounded)
+        if (status.grounded && !status.onLadder)
         {
             //Stopping gravity
             moveDirection.y = 0F;

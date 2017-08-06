@@ -84,7 +84,7 @@ public class EntityMovement : MonoBehaviour {
         {
 
 
-            if (controller.isGrounded)
+            if (controller.isGrounded && !onLadder)
             {
 
                 return true;
@@ -205,12 +205,12 @@ public class EntityMovement : MonoBehaviour {
 
         else
         {
-            jump();
+            
 
             getFinalSpeed();
             move(finalSpeed);
 
-            gravityAndLadder();
+            
 
             Debug.Log("Grounded is " + status.grounded);
             
@@ -225,6 +225,12 @@ public class EntityMovement : MonoBehaviour {
                 status.exiting = true;
                 status.movingToNode = true;
             }
+
+            gravityAndLadder();
+
+            jump();
+
+            
 
         }
     }
