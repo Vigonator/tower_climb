@@ -29,7 +29,6 @@ public class PlayerHealth : HealthBehaviour {
     public override void hit(float damage, Vector3 knockback)
     {
 
-        Debug.Log("Player hit with knockback");
         if (executeDamageBehaviour)
         {
             StartCoroutine("invincibility");

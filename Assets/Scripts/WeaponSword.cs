@@ -29,6 +29,11 @@ public class WeaponSword : Weapon
         }
     }
 
+    protected override void animate()
+    {
+        gameObject.GetComponent<Animator>().Play("SwordBasicSwing");
+    }
+
 
 }
 

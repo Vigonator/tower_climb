@@ -18,6 +18,6 @@ public class EnemyMovement : EntityMovement {
 
     protected override void getFinalSpeed()
     {
-        finalSpeed = 3 * direction;
+        finalSpeed = 0 * direction;
     }
 }

@@ -13,7 +13,7 @@ public class PlayerMovement : EntityMovement
         if (jumpCounter > 0)
         {
 
-            Debug.Log("jumpcounter = " + jumpCounter);
+            
             if (Input.GetButtonDown("Jump"))
             {
                 
@@ -21,7 +21,7 @@ public class PlayerMovement : EntityMovement
                 jumpCounter--;
 
                 status.jumping = true;
-                Debug.Log("Hi");
+                
             }
         }
 

@@ -51,13 +51,9 @@ public class EntityMovement : MonoBehaviour {
 
             if (entering || exiting)
             {
-                Debug.Log("entering OR exiting");
-
                 if (Vector3.Distance(position, new Vector3(door.moveNodeOut.transform.position.x, position.y, door.moveNodeOut.transform.position.z)) > 0.1F)
                 {
                     onNodeOut = false;
-
-                    Debug.Log(Vector3.Distance(position, new Vector3(door.moveNodeOut.transform.position.x, position.y, door.moveNodeOut.transform.position.z)));
                 }
                 else
                 {
@@ -100,7 +96,7 @@ public class EntityMovement : MonoBehaviour {
                 RaycastHit hit;
                 if (Physics.Raycast(position, Vector3.down, out hit, controller.height / 2 + 0.25F))
                 {
-                    Debug.Log("Hit " + hit.transform.gameObject);
+
 
                     controller.Move(new Vector3(0, -hit.distance, 0));
 
@@ -112,7 +108,7 @@ public class EntityMovement : MonoBehaviour {
 
                 else
                 {
-                    Debug.Log("Failure 1");
+
 
                     return false;
 
@@ -122,7 +118,7 @@ public class EntityMovement : MonoBehaviour {
 
             else
             {
-                Debug.Log("Failure 2");
+                
 
                 return false;
             }
@@ -186,7 +182,7 @@ public class EntityMovement : MonoBehaviour {
         
         this.transform.LookAt(new Vector3(tower.transform.position.x, this.transform.position.y, tower.transform.position.z));
 
-        Debug.Log("Jumping: " + status.jumping);
+        
 
         finalSpeed = 0;
 
@@ -212,7 +208,7 @@ public class EntityMovement : MonoBehaviour {
 
             
 
-            Debug.Log("Grounded is " + status.grounded);
+            
             
             if (status.canEnter && Input.GetButtonDown("Open"))
             {

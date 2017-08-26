@@ -36,8 +36,9 @@ public class Weapon : MonoBehaviour {
 
         
 
-        if(canFire = true && ammo > 0)
+        if(canFire == true && ammo > 0)
         {
+            canFire = false;
             fire();
         }
 
@@ -48,6 +49,7 @@ public class Weapon : MonoBehaviour {
     {
         StartCoroutine("cycle");
 
+        animate();
 
         StartCoroutine("firing");
     }
@@ -55,8 +57,8 @@ public class Weapon : MonoBehaviour {
     protected void onHit(Collider other)
     {
         healthBehaviour = other.GetComponent<HealthBehaviour>();
-
-        if (healthBehaviour != null && this.tag == healthBehaviour.damageDealerType)
+        
+        if (healthBehaviour != null && this.tag == healthBehaviour.damageDealerType )
             {
                 Vector3 knockbackDirection = new Vector3(other.transform.position.x - this.transform.position.x, 0, other.transform.position.z - this.transform.position.z).normalized;
                 knockbackDirection.y = 4;
@@ -64,16 +66,25 @@ public class Weapon : MonoBehaviour {
                 knockbackDirection *= knockback;
 
                 healthBehaviour.hit(damage, knockbackDirection);
-
-                Debug.Log("hit" + other);
+    
+                Debug.Log("hit " + other + "with" + this.gameObject);
             }
     }
 
-    IEnumerable cycle()
+    protected virtual void animate()
+    {
+
+    }
+
+    IEnumerator cycle()
     {
         canFire = false;
 
+        Debug.Log("cycle started");
+
         yield return new WaitForSeconds(cycleTime);
+
+        Debug.Log("cycle ended");
 
         canFire = true;
     }
@@ -91,6 +102,8 @@ public class Weapon : MonoBehaviour {
     {
             onHit(other);        
     }
+
+
 
 
 }
